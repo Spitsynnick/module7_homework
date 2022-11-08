@@ -1,5 +1,5 @@
-function checkPropInObject(str, obj) { // Функция принимает 2 аргумента: строку и объект
-  return obj.hasOwnProperty(str); // Проверяем: есть ли у объекта такое свойство
+function checkPropInObject(str, obj) { // Функция принимает в качестве аргументов строку и объект, а затем проверяет есть ли у переданного объекта свойство с данным именем
+  return obj.hasOwnProperty(str); 
 };
 
 

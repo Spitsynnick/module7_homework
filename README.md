@@ -1,1 +1,1 @@
-# module7_homework
+Homework on module 7 "Objects in JavaScript"

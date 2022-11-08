@@ -1,7 +1,7 @@
-function checkObjectProps(obj) { // Фунцкия принимает объект в качестве аргумента
-  for (let key in obj) { // Перебираем свойства объекта
-    if (obj.hasOwnProperty(key)) { // Если свойство объекта - собственное:
-      console.log("Ключ: " + key + ". Значение: " + obj[key]); // Вывести в консоль свойство + значение
+function checkObjectProps(obj) { // Фунцкия принимает в качестве аргумента объект и выводит в консоль все ключи и значения только собственных свойств
+  for (let key in obj) { 
+    if (obj.hasOwnProperty(key)) { 
+      console.log("Ключ: " + key + ". Значение: " + obj[key]); 
     }
   }
 };

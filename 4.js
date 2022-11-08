@@ -14,8 +14,9 @@ Device.prototype.switchOff = function() { // метод, выключающий 
   console.log(`${this.type} is switched off`);
 };
 
-const computer = new Device("Notebook", 45); // создаем объект - компьютер
-const washingMachine = new Device("Automatic WM", 1700); // создаем объект - стиральная машина
+
+const computer = new Device("Notebook", 45); // создать объект - компьютер
+const washingMachine = new Device("Automatic WM", 1700); // создать объект - стиральная машина
 
 // проверка:
 console.log(computer.type); // Notebook
@@ -25,6 +26,7 @@ console.log(computer.isSwitchedOn); // true
 console.log(washingMachine.type); // Automatic WM
 washingMachine.switchOn(); // Automatic WM is switched on
 console.log(washingMachine.isSwitchedOn); // true
+
 
 const Workingcomp = function(system, processor) { // функция-конструктор рабочего компьютера
   this.system = system, // ОС
@@ -42,11 +44,12 @@ const Workingmachine = function(load, consumption) { // функция-конс�
   }
 };
 
-Workingcomp.prototype = computer; // назначаем компьютер прототипом рабочего компьютера
-Workingmachine.prototype = washingMachine; // назначаем стиральную машину прототипом рабочей машины
+Workingcomp.prototype = computer; // назначить компьютер прототипом рабочего компьютера
+Workingmachine.prototype = washingMachine; // назначить стиральную машину прототипом рабочей машины
 
-const lenovo = new Workingcomp("Windows 10", "Intel Celeron"); // создаем экземпляр рабочего компьютера
-const panasonic = new Workingmachine(6.5, 56); // создаем экземпляр рабочей стиральной машины
+
+const lenovo = new Workingcomp("Windows 10", "Intel Celeron"); // создать экземпляр рабочего компьютера
+const panasonic = new Workingmachine(6.5, 56); // создать экземпляр рабочей стиральной машины
 
 // Проверка:
 console.log(lenovo.type); // Notebook

@@ -1,4 +1,4 @@
-class Device { // создаем класс: Device
+class Device { // создать класс: Device
   constructor(type, power) {
     this.type = type; // тип прибора
     this.power = power; // потребляемая мощность
@@ -10,14 +10,14 @@ class Device { // создаем класс: Device
     console.log(`${this.type} is switched on`);
   }
 
-  switchOff = function() { // метод, выключающий прибор из розетки
+  switchOff() { // метод, выключающий прибор из розетки
     this.isSwitchedOn = false;
     console.log(`${this.type} is switched off`);
   }
 }
 
-const computer = new Device("Notebook", 45); // создаем экземпляр класса - компьютер
-const washingMachine = new Device("Automatic WM", 1700); // создаем экземпляр класса - стиральная машина
+const computer = new Device("Notebook", 45); // создать экземпляр класса Device- компьютер
+const washingMachine = new Device("Automatic WM", 1700); // создать экземпляр класса Device- стиральная машина
 
 // проверка:
 console.log(computer.type); // Notebook
@@ -28,7 +28,7 @@ console.log(washingMachine.type); // Automatic WM
 washingMachine.switchOn(); // Automatic WM is switched on
 console.log(washingMachine.isSwitchedOn); // true
 
-class Workingcomp extends Device { // Создаем класс: Workingcomp, расширяющий класс Device
+class Workingcomp extends Device { // создать класс: Workingcomp, расширяющий класс Device
   constructor(type, system, processor) {
     super(type);
     this.system = system; // ОС
@@ -40,7 +40,7 @@ class Workingcomp extends Device { // Создаем класс: Workingcomp, р
   }
 }
 
-class Workingmachine extends Device { // Создаем класс: Workingmachine, расширяющий класс Device
+class Workingmachine extends Device { // создать класс: Workingmachine, расширяющий класс Device
   constructor(type, load, consumption) {
     super(type);
     this.load = load; // загрузка белья
@@ -52,8 +52,8 @@ class Workingmachine extends Device { // Создаем класс: Workingmachi
   }
 }
 
-const lenovo = new Workingcomp("Notebook", "Windows 10", "Intel Celeron"); // создаем экземпляр класса Workingcomp
-const panasonic = new Workingmachine("Automatic WM", 6.5, 56); // создаем экземпляр класса Workingmachine
+const lenovo = new Workingcomp("Notebook", "Windows 10", "Intel Celeron"); // создать экземпляр класса Workingcomp
+const panasonic = new Workingmachine("Automatic WM", 6.5, 56); // создать экземпляр класса Workingmachine
 
 // Проверка:
 console.log(lenovo instanceof Workingcomp); // true
