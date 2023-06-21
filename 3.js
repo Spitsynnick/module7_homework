@@ -1,4 +1,5 @@
-function createObject() { // Функция создает пустой объект, но без прототипа
+// функция создает пустой объект, но без прототипа
+function createObject() { 
   const emptyObj = Object.create(null);
   return emptyObj;
 }
